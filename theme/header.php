@@ -14,7 +14,7 @@
             <?php
             the_custom_logo();
             if (!has_custom_logo()) {
-                echo '<a href="' . home_url() . '"><img class="logo" src="https://dummyimage.com/128x64/000/fff" alt="logo"></a>';
+                echo '<a href="' . home_url() . '"><img class="custom-logo" src="https://dummyimage.com/128x64/000/fff" alt="logo"></a>';
             }
             ?>
             <?php wp_nav_menu() ?>
