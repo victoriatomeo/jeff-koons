@@ -1,0 +1,337 @@
+/*
+Theme Name: Portfolio Jeff Koons
+Text Domain: portfolio-jeff-koons
+Version: 0.1
+Tested up to: 5.9
+Requires at least: 5.9
+Requires PHP: 5.2.4
+Description: El tema para el portfolio de Jeff Koons.
+Tags: one-column, featured-images
+Author: Jeff Koons
+Author URI: 
+Theme URI: 
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+$main-color: #5b8ec1;
+$secondary-color: #404450;
+$background-color: #fffafa;
+$text-light: #fffafa;
+$text-dark: #404450;
+
+@mixin min-max($resMin, $resMax) {
+    @media (min-width: $resMin) and (max-width: $resMax) {
+        @content;
+    }
+}
+@mixin max($res) {
+    @media (max-width: $res) {
+        @content;
+    }
+}
+@mixin min($res) {
+    @media (min-width: $res) {
+        @content;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Raleway:wght@200;300;400;600;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    // border: 1px solid red;
+}
+
+/* contenedor */
+.contenedor {
+    margin-right: auto;
+    margin-left: auto;
+
+    @include min(768px) {
+        width: 750px;
+    }
+    @include min(992px) {
+        width: 970px;
+    }
+    @include min(1200px) {
+        width: 1170px;
+    }
+}
+
+.imagenFluida {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    flex-direction: column;
+    @include min(768px) {
+        flex-direction: row;
+    }
+
+    align-items: center;
+    background-color: $main-color;
+
+    > a {
+        display: inline-block;
+    }
+}
+
+.custom-logo {
+    display: block;
+}
+
+/* Menu */
+ul.menu {
+    display: flex;
+    flex-direction: column;
+    @include min(768px) {
+        flex-direction: row;
+    }
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    li {
+        text-align: right;
+        padding: 0 1rem 0 1rem;
+    }
+}
+
+li.menu-item {
+    list-style: none;
+    a {
+        text-decoration: none;
+        color: $text-light;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.ultimasEntradas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.textoObras {
+    text-align: center;
+    @include min(768px) {
+        padding: 1rem 8rem 1rem 8rem;
+    }
+    p {
+        padding: 1rem;
+    }
+}
+
+.listaObras {
+    display: grid;
+    @include min(768px) {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem 9rem 1rem 9rem;
+    }
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    /* fix overflow */
+    min-width: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.textoObras > h2 {
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+    color: $main-color;
+}
+
+.contenidoTarjeta {
+    background-color: $main-color;
+    padding: 1rem;
+    > div {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+.boton {
+    background-color: #c4c4c4;
+    border-radius: 1rem;
+    padding: 0.25rem 2rem 0.25rem 2rem;
+    text-decoration: none;
+    color: $text-dark;
+}
+
+.contenidoTarjeta > div {
+    text-align: center;
+}
+
+.contactame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $secondary-color;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.contacto {
+    text-align: center;
+    padding: 1rem;
+
+    @include min(768px) {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    @include min(1024px) {
+        padding-left: 14rem;
+        padding-right: 14rem;
+    }
+
+    > h2 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: $text-light;
+        // @include min(768px) {
+        //     margin: 0 0 2rem 0;
+        // }
+    }
+
+    > div {
+        background-color: $background-color;
+        border-radius: 2rem;
+
+        h3,
+        p {
+            padding: 1rem;
+        }
+    }
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    > input {
+        margin: 0.5rem 3rem 0.5rem 3rem;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    > a {
+        background-color: $main-color;
+        color: $text-light;
+        border-radius: 1rem;
+        padding: 0.25rem 1rem 0.25rem 1rem;
+        text-decoration: none;
+        @include min(768px) {
+            margin: 1rem 6rem 1rem 6rem;
+        }
+    }
+}
+
+.flechaArriba {
+    padding-top: 2rem;
+    text-align: center;
+    > a {
+        text-decoration: none;
+        color: $main-color;
+    }
+}
+
+.pie {
+    background-color: $main-color;
+    color: $text-light;
+    display: flex;
+    flex-direction: column;
+    @include min(768px) {
+        flex-direction: row;
+    }
+    > * {
+        flex: 1;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    > div {
+        padding: 1rem;
+        > ul {
+            li {
+                list-style: none;
+            }
+        }
+    }
+    > div:first-child > a > img {
+        margin: auto;
+    }
+}
+
+.banner {
+    background-color: $secondary-color;
+    color: $text-light;
+    padding: 5rem 0 5rem 0;
+    text-align: center;
+    h1 {
+        color: $text-light;
+    }
+}
+
+.entradas {
+    display: grid;
+    @include min(768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+
+.entrada {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1rem;
+    /* fix overflow */
+    min-width: 0;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+.contenido {
+    padding: 1rem;
+}

@@ -1,0 +1,321 @@
+/*
+Theme Name: Portfolio Jeff Koons
+Text Domain: portfolio-jeff-koons
+Version: 0.1
+Tested up to: 5.9
+Requires at least: 5.9
+Requires PHP: 5.2.4
+Description: El tema para el portfolio de Jeff Koons.
+Tags: one-column, featured-images
+Author: Jeff Koons
+Author URI: 
+Theme URI: 
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Raleway:wght@200;300;400;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+/* contenedor */
+.contenedor {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .contenedor {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .contenedor {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor {
+    width: 1170px;
+  }
+}
+
+.imagenFluida {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5b8ec1;
+}
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+  }
+}
+.navbar > a {
+  display: inline-block;
+}
+
+.custom-logo {
+  display: block;
+}
+
+/* Menu */
+ul.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  ul.menu {
+    flex-direction: row;
+  }
+}
+ul.menu li {
+  text-align: right;
+  padding: 0 1rem 0 1rem;
+}
+
+li.menu-item {
+  list-style: none;
+}
+li.menu-item a {
+  text-decoration: none;
+  color: #fffafa;
+}
+li.menu-item a:hover {
+  text-decoration: underline;
+}
+
+.ultimasEntradas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.textoObras {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .textoObras {
+    padding: 1rem 8rem 1rem 8rem;
+  }
+}
+.textoObras p {
+  padding: 1rem;
+}
+
+.listaObras {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .listaObras {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 9rem 1rem 9rem;
+  }
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  /* fix overflow */
+  min-width: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.textoObras > h2 {
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+  color: #5b8ec1;
+}
+
+.contenidoTarjeta {
+  background-color: #5b8ec1;
+  padding: 1rem;
+}
+.contenidoTarjeta > div {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.boton {
+  background-color: #c4c4c4;
+  border-radius: 1rem;
+  padding: 0.25rem 2rem 0.25rem 2rem;
+  text-decoration: none;
+  color: #404450;
+}
+
+.contenidoTarjeta > div {
+  text-align: center;
+}
+
+.contactame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #404450;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contacto {
+  text-align: center;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .contacto {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .contacto {
+    padding-left: 14rem;
+    padding-right: 14rem;
+  }
+}
+.contacto > h2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fffafa;
+}
+.contacto > div {
+  background-color: #fffafa;
+  border-radius: 2rem;
+}
+.contacto > div h3,
+.contacto > div p {
+  padding: 1rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+.formulario > input {
+  margin: 0.5rem 3rem 0.5rem 3rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.formulario > a {
+  background-color: #5b8ec1;
+  color: #fffafa;
+  border-radius: 1rem;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .formulario > a {
+    margin: 1rem 6rem 1rem 6rem;
+  }
+}
+
+.flechaArriba {
+  padding-top: 2rem;
+  text-align: center;
+}
+.flechaArriba > a {
+  text-decoration: none;
+  color: #5b8ec1;
+}
+
+.pie {
+  background-color: #5b8ec1;
+  color: #fffafa;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .pie {
+    flex-direction: row;
+  }
+}
+.pie > * {
+  flex: 1;
+}
+.pie h2 {
+  font-size: 1.5rem;
+}
+.pie > div {
+  padding: 1rem;
+}
+.pie > div > ul li {
+  list-style: none;
+}
+.pie > div:first-child > a > img {
+  margin: auto;
+}
+
+.banner {
+  background-color: #404450;
+  color: #fffafa;
+  padding: 5rem 0 5rem 0;
+  text-align: center;
+}
+.banner h1 {
+  color: #fffafa;
+}
+
+.entradas {
+  display: grid;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .entradas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.entrada {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem;
+  /* fix overflow */
+  min-width: 0;
+}
+.entrada a {
+  text-decoration: none;
+  color: black;
+}
+.entrada a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+}
+.entrada h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.contenido {
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
