@@ -9,6 +9,7 @@
         <div class="contenedor">
             <div class="entradas">
                 <?php
+                query_posts( 'posts_per_page=10' );
                 if (have_posts()) : while (have_posts()) : the_post();
                 ?>
                         <article class="entrada">

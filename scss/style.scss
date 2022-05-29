@@ -59,6 +59,9 @@ $text-dark: #404450;
     @include min(1200px) {
         width: 1170px;
     }
+    @include min(1500px) {
+        width: 1728px;
+    }
 }
 
 .imagenFluida {

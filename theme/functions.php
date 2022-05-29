@@ -19,10 +19,10 @@ add_theme_support('post-thumbnails');
 
 add_theme_support('custom-header', array(
   'flex-width'    => true,
-  'width'         => 1170,
+  'width'         => 1728,
   'flex-height'   => true,
-  'height'        => 300,
-  'default-image' => 'http://dummyimage.com/1170x300/000/fff',
+  'height'        => 400,
+  'default-image' => 'http://dummyimage.com/1728x400/000/fff',
 ));
 
 add_theme_support('custom-logo', array(
