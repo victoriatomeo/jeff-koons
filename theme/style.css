@@ -318,4 +318,10 @@ h2 {
   padding: 1rem;
 }
 
+.imagenDestacada {
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@
     </section>
     <section class="contenedor">
         <article class="contenido">
+            <?php the_post_thumbnail('post-thumbnail', ['class' => 'imagenFluida imagenDestacada', 'title' => 'Feature image']); ?>
             <?php the_content() ?>
         </article>
     </section>
